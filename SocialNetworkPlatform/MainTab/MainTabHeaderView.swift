@@ -28,18 +28,25 @@ internal final class MainTabHeaderView: UIView {
         return view
     }()
     
-    private let collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.estimatedItemSize = CGSize(width: 200, height: MainTabHeaderView.height)
+//        layout.estimatedItemSize = CGSize(width: 100, height: MainTabHeaderView.height)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isScrollEnabled = false
         return collectionView
+    }()
+    
+    private let addButton: UIButton = {
+        let button = UIButton(type: .system)
+        let image = UIImage(systemName: "plus.circle")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        button.setImage(image, for: .normal)
+        return button
     }()
     
     private let defaultCellIdentifier = "default"
@@ -66,30 +73,40 @@ internal final class MainTabHeaderView: UIView {
     internal init() {
         super.init(frame: .zero)
         setupView()
-        setupCollectionView()
     }
     
     required internal init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
-        setupCollectionView()
     }
     
     private func setupView() {
         isUserInteractionEnabled = true
         selectionIndicatorView.layer.cornerRadius = IndicatorComponent.cornerRadius
         addSubview(selectionIndicatorView)
+        
+        addButton.fixInView(self, attributes: [.top, .bottom])
+        addButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        addButton.frame = CGRect(x: 0, y: 0, width: 24, height: MainTabHeaderView.height)
+        addButton.addTarget(self, action: #selector(addButtonClicked), for: .touchUpInside)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
             self.setSelectionIndicator(atIndex: self.selectedItem)
         }
+        setupCollectionView()
     }
     
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isUserInteractionEnabled = true
-        collectionView.fixInView(self)
+        collectionView.fixInView(self, attributes: [.top, .bottom, .trailing])
+        collectionView.leadingAnchor.constraint(equalTo: addButton.trailingAnchor).isActive = true
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: defaultCellIdentifier)
+    }
+    
+    @objc private func addButtonClicked() {
+        print("Add Button clicked!")
     }
     
     // MARK: - Selection Indicator Funcations
@@ -99,8 +116,9 @@ internal final class MainTabHeaderView: UIView {
     }
 
     private func setSelectionIndicator(xPosition: CGFloat) {
+        let leftSpacing = addButton.frame.width + 16
         selectionIndicatorView.frame = CGRect(
-            x: xPosition,
+            x: xPosition + leftSpacing,
             y: MainTabHeaderView.height - IndicatorComponent.height,
             width: IndicatorComponent.width,
             height: IndicatorComponent.height
@@ -144,7 +162,7 @@ internal final class MainTabHeaderView: UIView {
     }
 }
 
-extension MainTabHeaderView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainTabHeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -171,5 +189,10 @@ extension MainTabHeaderView: UICollectionViewDelegate, UICollectionViewDataSourc
     internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedItem = indexPath.row
         animateSelectionIndicatorTransition(selectedIndex: selectedItem)
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = max(collectionView.bounds.width / CGFloat(items.count), 0)
+        return CGSize(width: width, height: MainTabHeaderView.height)
     }
 }

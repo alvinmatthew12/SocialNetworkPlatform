@@ -15,7 +15,7 @@ class MainTabViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         
-        headerView.items = ["My Posts", "All Posts"]
+        headerView.items = ["All Posts", "Profile"]
         let vc1 = UIViewController()
         vc1.view.backgroundColor = .blue
         let vc2 = UIViewController()
