@@ -14,7 +14,7 @@ internal struct CoreDataHelper {
         switch result {
         case let .success(data):
             if data.isEmpty {
-                for post in PostModel.dummy {
+                for post in PostModel.dummy.reversed() {
                     _ = manager.create(post)
                 }
             }
