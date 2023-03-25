@@ -60,11 +60,6 @@ internal final class CreatePostViewController: UIViewController {
     
     internal var presenter: CreatePostViewToPresenterProtocol?
     
-    override internal func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        textView.becomeFirstResponder()
-    }
-    
     override internal func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,7 +93,6 @@ internal final class CreatePostViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tapGesture)
-
     }
     
     private func setupNavigationBar() {
@@ -117,6 +111,7 @@ internal final class CreatePostViewController: UIViewController {
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbar.items = [imageBarButton, space, captionBarButton]
         textView.inputAccessoryView = toolbar
+        textView.becomeFirstResponder()
     }
     
     private func post() {
@@ -129,9 +124,8 @@ internal final class CreatePostViewController: UIViewController {
     }
     
     @objc private func imageButtonTapped() {
-        present(imagePicker, animated: true, completion: { [weak self] in
-            self?.textView.resignFirstResponder()
-        })
+        textView.resignFirstResponder()
+        present(imagePicker, animated: true)
     }
     
     @objc private func keyboardWillShow(_ notification: Notification) {
@@ -181,11 +175,16 @@ extension CreatePostViewController: UIImagePickerControllerDelegate & UINavigati
         if let pickedImage = info[.originalImage] as? UIImage {
             selectedImage = pickedImage
         }
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: { [weak self] in
+            self?.textView.becomeFirstResponder()
+        })
     }
 
     internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
+        textView.becomeFirstResponder()
+        dismiss(animated: true, completion: { [weak self] in
+            self?.textView.becomeFirstResponder()
+        })
     }
 }
 
