@@ -43,6 +43,7 @@
 		E1D6790A29CF742A006C892A /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790929CF742A006C892A /* CreatePostInteractor.swift */; };
 		E1D6790D29CF7762006C892A /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */; };
 		E1D6791029CF78B0006C892A /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */; };
+		E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		E1D6790929CF742A006C892A /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
 		E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
 		E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
+		E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostNotificationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		E1D6788A29CEE104006C892A /* SocialNetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				E1D6791129CF82A3006C892A /* Helpers */,
 				E1D6790429CF72B4006C892A /* Scene */,
 				E1D678DA29CF210A006C892A /* UserManager */,
 				E1D678C329CEE73E006C892A /* Extensions */,
@@ -376,6 +379,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		E1D6791129CF82A3006C892A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,6 +502,7 @@
 				E1D678F629CF5B8C006C892A /* CoreDataError.swift in Sources */,
 				E1D678DF29CF2194006C892A /* PostModel.swift in Sources */,
 				E1D678EF29CF39E0006C892A /* CreatePostViewController.swift in Sources */,
+				E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */,
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,

@@ -18,7 +18,7 @@ internal final class PostPresenter: PostViewToPresenterProtocol {
 
 
 extension PostPresenter: PostInteractorToPresenterProtocol {
-    func postFetched(result: Result<[PostModel], CoreDataError>) {
+    internal func postFetched(result: Result<[PostModel], CoreDataError>) {
         switch result {
         case let .success(posts):
             let sortedPosts = posts.sorted(by: { $0.createdAt > $1.createdAt })

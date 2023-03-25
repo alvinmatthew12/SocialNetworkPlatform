@@ -41,6 +41,7 @@ internal final class CreatePostInteractor: CreatePostPresenterToInteractorProtoc
         if let error = coreDataManager.create(post) {
             presenter?.postFailed(error: error.localizedDescription)
         } else {
+            NewPostNotificationHelper.post()
             presenter?.postSuccess()
         }
     }

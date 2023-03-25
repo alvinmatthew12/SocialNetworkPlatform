@@ -31,6 +31,14 @@ internal final class PostListViewController: UIViewController {
         tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
         
         presenter?.fetchPosts()
+        
+        NewPostNotificationHelper.observe { [weak self] _ in
+            self?.presenter?.fetchPosts()
+        }
+    }
+    
+    deinit {
+        NewPostNotificationHelper.removeObserver()
     }
 }
 
