@@ -17,7 +17,7 @@ class MainTabViewController: UIViewController {
         setupView()
         
         headerView.items = ["All Posts", "Users"]
-        pageViewController._viewControllers = [PostListViewController(), UserListViewController()]
+        pageViewController._viewControllers = [PostRouter.createModule(), UserListViewController()]
     }
     
     override internal func viewWillAppear(_ animated: Bool) {

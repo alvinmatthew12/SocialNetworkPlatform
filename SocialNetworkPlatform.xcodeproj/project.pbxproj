@@ -23,7 +23,7 @@
 		E1D678D729CF1245006C892A /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D678D529CF1245006C892A /* PostTableViewCell.xib */; };
 		E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678D829CF14E0006C892A /* UIColor+Extension.swift */; };
 		E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678DC29CF2127006C892A /* LocalUser.swift */; };
-		E1D678DF29CF2194006C892A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678DE29CF2194006C892A /* Post.swift */; };
+		E1D678DF29CF2194006C892A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678DE29CF2194006C892A /* PostModel.swift */; };
 		E1D678E129CF28B3006C892A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E029CF28B3006C892A /* UserManager.swift */; };
 		E1D678E529CF2C67006C892A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E429CF2C67006C892A /* UserListViewController.swift */; };
 		E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */; };
@@ -31,6 +31,14 @@
 		E1D678EF29CF39E0006C892A /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678ED29CF39E0006C892A /* CreatePostViewController.swift */; };
 		E1D678F029CF39E0006C892A /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */; };
 		E1D678F229CF3B83006C892A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */; };
+		E1D678F429CF52E3006C892A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F329CF52E3006C892A /* CoreDataManager.swift */; };
+		E1D678F629CF5B8C006C892A /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F529CF5B8C006C892A /* CoreDataError.swift */; };
+		E1D678F829CF5E46006C892A /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F729CF5E46006C892A /* Encodable+Extension.swift */; };
+		E1D678FA29CF6631006C892A /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F929CF6631006C892A /* PostPresenter.swift */; };
+		E1D678FC29CF680A006C892A /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678FB29CF680A006C892A /* PostRouter.swift */; };
+		E1D678FF29CF69A6006C892A /* PostProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678FE29CF69A6006C892A /* PostProtocol.swift */; };
+		E1D6790129CF69FB006C892A /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790029CF69FB006C892A /* PostInteractor.swift */; };
+		E1D6790329CF6CB7006C892A /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790229CF6CB7006C892A /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +71,7 @@
 		E1D678D529CF1245006C892A /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		E1D678D829CF14E0006C892A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E1D678DC29CF2127006C892A /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
-		E1D678DE29CF2194006C892A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E1D678DE29CF2194006C892A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		E1D678E029CF28B3006C892A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		E1D678E429CF2C67006C892A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +79,14 @@
 		E1D678ED29CF39E0006C892A /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		E1D678F329CF52E3006C892A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E1D678F529CF5B8C006C892A /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		E1D678F729CF5E46006C892A /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		E1D678F929CF6631006C892A /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
+		E1D678FB29CF680A006C892A /* PostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
+		E1D678FE29CF69A6006C892A /* PostProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProtocol.swift; sourceTree = "<group>"; };
+		E1D6790029CF69FB006C892A /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		E1D6790229CF6CB7006C892A /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				E1D6789429CEE104006C892A /* SocialNetworkPlatform.xcdatamodeld */,
+				E1D678F329CF52E3006C892A /* CoreDataManager.swift */,
+				E1D678F529CF5B8C006C892A /* CoreDataError.swift */,
+				E1D6790229CF6CB7006C892A /* CoreDataHelper.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -169,6 +188,7 @@
 				E1D678C629CEE9D8006C892A /* UIView+Extension.swift */,
 				E1D678D829CF14E0006C892A /* UIColor+Extension.swift */,
 				E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */,
+				E1D678F729CF5E46006C892A /* Encodable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +196,7 @@
 		E1D678CA29CF04CA006C892A /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				E1D678FD29CF699B006C892A /* Protocol */,
 				E1D678CF29CF0523006C892A /* Router */,
 				E1D678CE29CF051C006C892A /* Entity */,
 				E1D678CD29CF0514006C892A /* Presenter */,
@@ -197,6 +218,7 @@
 		E1D678CC29CF04DD006C892A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				E1D6790029CF69FB006C892A /* PostInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 		E1D678CD29CF0514006C892A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E1D678F929CF6631006C892A /* PostPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -211,7 +234,7 @@
 		E1D678CE29CF051C006C892A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				E1D678DE29CF2194006C892A /* Post.swift */,
+				E1D678DE29CF2194006C892A /* PostModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -219,6 +242,7 @@
 		E1D678CF29CF0523006C892A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				E1D678FB29CF680A006C892A /* PostRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -290,6 +314,14 @@
 				E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E1D678FD29CF699B006C892A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678FE29CF69A6006C892A /* PostProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,18 +430,26 @@
 				E1D6789629CEE104006C892A /* SocialNetworkPlatform.xcdatamodeld in Sources */,
 				E1D678C729CEE9D8006C892A /* UIView+Extension.swift in Sources */,
 				E1D678E129CF28B3006C892A /* UserManager.swift in Sources */,
+				E1D678F429CF52E3006C892A /* CoreDataManager.swift in Sources */,
 				E1D678C929CEEAA3006C892A /* MainTabHeaderView.swift in Sources */,
 				E1D678F229CF3B83006C892A /* UIApplication+Extension.swift in Sources */,
 				E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */,
-				E1D678DF29CF2194006C892A /* Post.swift in Sources */,
+				E1D678F629CF5B8C006C892A /* CoreDataError.swift in Sources */,
+				E1D678DF29CF2194006C892A /* PostModel.swift in Sources */,
 				E1D678EF29CF39E0006C892A /* CreatePostViewController.swift in Sources */,
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,
+				E1D678FF29CF69A6006C892A /* PostProtocol.swift in Sources */,
+				E1D6790129CF69FB006C892A /* PostInteractor.swift in Sources */,
 				E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */,
 				E1D678C529CEE74E006C892A /* Array+Extension.swift in Sources */,
+				E1D678FC29CF680A006C892A /* PostRouter.swift in Sources */,
+				E1D6790329CF6CB7006C892A /* CoreDataHelper.swift in Sources */,
 				E1D6788E29CEE104006C892A /* SceneDelegate.swift in Sources */,
+				E1D678FA29CF6631006C892A /* PostPresenter.swift in Sources */,
 				E1D678D629CF1245006C892A /* PostTableViewCell.swift in Sources */,
+				E1D678F829CF5E46006C892A /* Encodable+Extension.swift in Sources */,
 				E1D678E529CF2C67006C892A /* UserListViewController.swift in Sources */,
 				E1D678D229CF055A006C892A /* PostListViewController.swift in Sources */,
 				E1D678C229CEE45D006C892A /* MainTabPageViewController.swift in Sources */,

@@ -9,13 +9,15 @@ import UIKit
 
 internal final class PostListViewController: UIViewController {
     
-    private var posts: [Post] = [] {
+    private var posts: [PostModel] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
     private let tableView = UITableView()
+    
+    internal var presenter: PostViewToPresenterProtocol?
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ internal final class PostListViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
         
-        posts = Post.dummy
+        presenter?.fetchPosts()
     }
 }
 
@@ -53,5 +55,15 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
     
     internal func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+}
+
+extension PostListViewController: PostPresenterToViewProtocol {
+    internal func showPosts(posts: [PostModel]) {
+        self.posts = posts
+    }
+    
+    internal func showError(message: String) {
+        print(message)
     }
 }

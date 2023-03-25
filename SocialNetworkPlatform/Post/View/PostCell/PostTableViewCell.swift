@@ -24,10 +24,10 @@ internal final class PostTableViewCell: UITableViewCell {
         postImageView.isHidden = true
     }
     
-    internal func setupPost(_ post: Post) {
-        profilePictureImageView.image = UIImage(named: post.user.profilePictureName)
-        nameLabel.text = post.user.name
-        usernameLabel.text = "@\(post.user.username)"
+    internal func setupPost(_ post: PostModel) {
+        profilePictureImageView.image = UIImage(named: post.user?.profilePictureName ?? "")
+        nameLabel.text = post.user?.name
+        usernameLabel.text = "@\(post.user?.username ?? "")"
         postLabel.text = post.post
         if let imageName = post.postImageName {
             postImageView.isHidden = false
