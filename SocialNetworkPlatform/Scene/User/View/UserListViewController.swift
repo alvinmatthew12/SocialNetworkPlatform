@@ -39,6 +39,7 @@ internal final class UserListViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.isScrollEnabled = false
         tableView.register(UserTableViewCell.nib, forCellReuseIdentifier: UserTableViewCell.identifier)
         
         users = LocalUser.users

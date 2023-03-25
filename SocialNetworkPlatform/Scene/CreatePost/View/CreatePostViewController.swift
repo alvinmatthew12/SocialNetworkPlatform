@@ -72,7 +72,14 @@ internal final class CreatePostViewController: UIViewController {
         // Register for keyboard notifications
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override internal func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250)) {
+            self.textView.becomeFirstResponder()
+        }
     }
     
     private func setupView() {
@@ -111,7 +118,6 @@ internal final class CreatePostViewController: UIViewController {
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolbar.items = [imageBarButton, space, captionBarButton]
         textView.inputAccessoryView = toolbar
-        textView.becomeFirstResponder()
     }
     
     private func post() {
@@ -181,7 +187,6 @@ extension CreatePostViewController: UIImagePickerControllerDelegate & UINavigati
     }
 
     internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        textView.becomeFirstResponder()
         dismiss(animated: true, completion: { [weak self] in
             self?.textView.becomeFirstResponder()
         })

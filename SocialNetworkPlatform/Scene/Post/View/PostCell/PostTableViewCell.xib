@@ -28,16 +28,16 @@
                         <rect key="frame" x="72" y="16" width="279" height="182"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7jd-bA-enz">
-                                <rect key="frame" x="0.0" y="0.0" width="279" height="26.666666666666668"/>
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="25.333333333333332"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-xr-EL0">
-                                        <rect key="frame" x="0.0" y="5" width="76" height="17"/>
+                                        <rect key="frame" x="0.0" y="4.3333333333333321" width="76" height="17"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <color key="textColor" name="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-ec-gfx">
-                                        <rect key="frame" x="81" y="5" width="198" height="17"/>
+                                        <rect key="frame" x="81" y="4.3333333333333321" width="198" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" name="greyColor"/>
                                         <nil key="highlightedColor"/>
@@ -45,12 +45,12 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mi-l0-0bh">
-                                <rect key="frame" x="0.0" y="34.666666666666664" width="279" height="14.333333333333336"/>
+                                <rect key="frame" x="0.0" y="33.333333333333336" width="279" height="15.666666666666664"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" name="textColor"/>
-                                            <font key="NSFont" metaFont="cellTitle"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
