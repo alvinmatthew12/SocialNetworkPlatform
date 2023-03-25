@@ -33,7 +33,7 @@ internal final class PostTableViewCell: UITableViewCell {
             if let namedImage = UIImage(named: imageName) {
                 postImageView.image = resizeImage(image: namedImage, newHeight: 120)
                 postImageView.isHidden = false
-            } else if let localImage = getLocalImage(name: imageName) {
+            } else if let localImage = ImageFileManager.getImage(byName: imageName) {
                 postImageView.image = resizeImage(image: localImage, newHeight: 120)
                 postImageView.isHidden = false
             } else {
@@ -53,21 +53,5 @@ internal final class PostTableViewCell: UITableViewCell {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage
-    }
-    
-    private func getLocalImage(name: String) -> UIImage? {
-        let fileManager = FileManager.default
-        do {
-            let documentsURL = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            let imageURL = documentsURL.appendingPathComponent(name)
-            guard
-                let imageData = try? Data(contentsOf: imageURL),
-                let image = UIImage(data: imageData)
-            else { return nil }
-            return image
-        } catch {
-            print(">>> ", error)
-            return nil
-        }
     }
 }

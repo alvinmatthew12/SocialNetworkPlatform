@@ -18,22 +18,12 @@ internal final class CreatePostInteractor: CreatePostPresenterToInteractorProtoc
     }
     
     internal func saveImage(data: Data?) {
-        guard let imageData = data else { return }
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            presenter?.saveImageFailed(error: "Failed to get documentsDirectory")
-            return
-        }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMddHHmmssSSS"
-        
-        let currentUsername = UserManager.shared.getCurrentUser().username
-        let filename = "\(currentUsername)_\(dateFormatter.string(from: Date()))"
-        let fileURL = documentDirectory.appendingPathComponent(filename).appendingPathExtension("jpg")
-        do {
-            try imageData.write(to: fileURL, options: .atomic)
-            presenter?.saveImageSuccess(imageName: "\(filename).jpg")
-        } catch {
-            presenter?.saveImageFailed(error: error.localizedDescription)
+        ImageFileManager.save(data: data) { [presenter] fileName, error in
+            if let error = error {
+                presenter?.saveImageFailed(error: error)
+            } else if let fileName = fileName {
+                presenter?.saveImageSuccess(imageName: "\(fileName).jpg")
+            }
         }
     }
     

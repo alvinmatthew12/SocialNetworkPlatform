@@ -44,6 +44,7 @@
 		E1D6790D29CF7762006C892A /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */; };
 		E1D6791029CF78B0006C892A /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */; };
 		E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */; };
+		E1D6791A29CF9D41006C892A /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791929CF9D41006C892A /* ImageFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
 		E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
 		E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostNotificationHelper.swift; sourceTree = "<group>"; };
+		E1D6791929CF9D41006C892A /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */,
+				E1D6791929CF9D41006C892A /* ImageFileManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */,
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
+				E1D6791A29CF9D41006C892A /* ImageFileManager.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,
 				E1D6790D29CF7762006C892A /* CreatePostPresenter.swift in Sources */,
 				E1D678FF29CF69A6006C892A /* PostProtocol.swift in Sources */,

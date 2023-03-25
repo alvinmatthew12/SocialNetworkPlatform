@@ -14,6 +14,10 @@ internal final class PostPresenter: PostViewToPresenterProtocol {
     internal func fetchPosts() {
         interactor?.fetchPost()
     }
+    
+    internal func deletePost(post: PostModel) {
+        interactor?.deletePost(post: post)
+    }
 }
 
 
@@ -26,5 +30,13 @@ extension PostPresenter: PostInteractorToPresenterProtocol {
         case let .failure(failure):
             view?.showError(message: failure.localizedDescription)
         }
+    }
+    
+    internal func deletePostSuccess() {
+        fetchPosts()
+    }
+    
+    internal func deletePostFailed(error: String) {
+        view?.showError(message: error)
     }
 }

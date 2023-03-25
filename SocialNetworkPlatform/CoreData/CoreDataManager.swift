@@ -68,6 +68,26 @@ internal struct CoreDataManager<T: Codable> {
             return .failure(.fetchError)
         }
     }
+    
+    internal func delete(id: String) -> CoreDataError? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return .custom("Failed to get appDelegate")
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+        do {
+            guard let dataToDelete = try managedContext.fetch(fetchRequest)[safe: 0] as? NSManagedObject else {
+                return .deleteError
+            }
+            managedContext.delete(dataToDelete)
+            try managedContext.save()
+        } catch {
+            return .deleteError
+        }
+        return nil
+    }
 }
 
 extension NSManagedObject {

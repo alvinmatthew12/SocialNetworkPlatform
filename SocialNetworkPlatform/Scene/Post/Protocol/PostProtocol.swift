@@ -12,6 +12,7 @@ internal protocol PostViewToPresenterProtocol {
     var interactor: PostPresenterToInteractorProtocol? { get set }
     
     func fetchPosts()
+    func deletePost(post: PostModel)
 }
 
 internal protocol PostPresenterToViewProtocol {
@@ -22,8 +23,11 @@ internal protocol PostPresenterToViewProtocol {
 internal protocol PostPresenterToInteractorProtocol {
     var presenter: PostInteractorToPresenterProtocol? { get set }
     func fetchPost()
+    func deletePost(post: PostModel)
 }
 
 internal protocol PostInteractorToPresenterProtocol {
     func postFetched(result: Result<[PostModel], CoreDataError>)
+    func deletePostSuccess()
+    func deletePostFailed(error: String)
 }

@@ -10,6 +10,7 @@ import Foundation
 internal enum CoreDataError: Error {
     case createError
     case fetchError
+    case deleteError
     case invalidEntityName(name: String)
     case custom(String)
 }
@@ -18,9 +19,11 @@ extension CoreDataError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .createError:
-            return NSLocalizedString("Failed to create core data", comment: "Core Data Error")
+            return NSLocalizedString("Failed to create data", comment: "Core Data Error")
         case .fetchError:
-            return NSLocalizedString("Failed to fetch core data", comment: "Core Data Error")
+            return NSLocalizedString("Failed to fetch data", comment: "Core Data Error")
+        case .deleteError:
+            return NSLocalizedString("Failed to delete data", comment: "Core Data Error")
         case let .invalidEntityName(name):
             return NSLocalizedString("Invalid entity name: \(name)", comment: "Core Data Error")
         case let .custom(message):
