@@ -28,6 +28,9 @@
 		E1D678E529CF2C67006C892A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E429CF2C67006C892A /* UserListViewController.swift */; };
 		E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */; };
 		E1D678EA29CF2E1E006C892A /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D678E829CF2E1E006C892A /* UserTableViewCell.xib */; };
+		E1D678EF29CF39E0006C892A /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678ED29CF39E0006C892A /* CreatePostViewController.swift */; };
+		E1D678F029CF39E0006C892A /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */; };
+		E1D678F229CF3B83006C892A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		E1D678E429CF2C67006C892A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		E1D678E829CF2E1E006C892A /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		E1D678ED29CF39E0006C892A /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
+		E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		E1D6788A29CEE104006C892A /* SocialNetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				E1D678EB29CF39B5006C892A /* CreatePost */,
 				E1D678DA29CF210A006C892A /* UserManager */,
 				E1D678C329CEE73E006C892A /* Extensions */,
 				E1D678C029CEE2E8006C892A /* CoreData */,
@@ -161,6 +168,7 @@
 				E1D678C429CEE74E006C892A /* Array+Extension.swift */,
 				E1D678C629CEE9D8006C892A /* UIView+Extension.swift */,
 				E1D678D829CF14E0006C892A /* UIColor+Extension.swift */,
+				E1D678F129CF3B83006C892A /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +275,23 @@
 			path = UserCell;
 			sourceTree = "<group>";
 		};
+		E1D678EB29CF39B5006C892A /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678EC29CF39C8006C892A /* View */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		E1D678EC29CF39C8006C892A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678ED29CF39E0006C892A /* CreatePostViewController.swift */,
+				E1D678EE29CF39E0006C892A /* CreatePostViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D678D729CF1245006C892A /* PostTableViewCell.xib in Resources */,
+				E1D678F029CF39E0006C892A /* CreatePostViewController.xib in Resources */,
 				E1D678EA29CF2E1E006C892A /* UserTableViewCell.xib in Resources */,
 				E1D6789B29CEE105006C892A /* LaunchScreen.storyboard in Resources */,
 				E1D6789829CEE105006C892A /* Assets.xcassets in Resources */,
@@ -373,8 +399,10 @@
 				E1D678C729CEE9D8006C892A /* UIView+Extension.swift in Sources */,
 				E1D678E129CF28B3006C892A /* UserManager.swift in Sources */,
 				E1D678C929CEEAA3006C892A /* MainTabHeaderView.swift in Sources */,
+				E1D678F229CF3B83006C892A /* UIApplication+Extension.swift in Sources */,
 				E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */,
 				E1D678DF29CF2194006C892A /* Post.swift in Sources */,
+				E1D678EF29CF39E0006C892A /* CreatePostViewController.swift in Sources */,
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,

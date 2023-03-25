@@ -105,7 +105,7 @@ internal final class MainTabHeaderView: UIView {
     }
     
     @objc private func addButtonClicked() {
-        print("Add Button clicked!")
+        UIApplication.topViewController()?.navigationController?.pushViewController(CreatePostViewController(), animated: true)
     }
     
     // MARK: - Selection Indicator Funcations

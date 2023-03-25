@@ -42,6 +42,7 @@ extension PostListViewController: UITableViewDelegate, UITableViewDataSource {
             let post = posts[safe: indexPath.row],
             let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as? PostTableViewCell
         else { return UITableViewCell() }
+        cell.selectionStyle = .none
         cell.setupPost(post)
         return cell
     }
