@@ -69,6 +69,8 @@ internal final class MainTabHeaderView: UIView {
     
     private var isAlreadySetupIndicator: Bool = false
     
+    internal var didTapAddButton: (() -> Void)?
+    
     internal init() {
         super.init(frame: .zero)
         setupView()
@@ -105,7 +107,7 @@ internal final class MainTabHeaderView: UIView {
     }
     
     @objc private func addButtonClicked() {
-        UIApplication.topViewController()?.navigationController?.pushViewController(CreatePostViewController(), animated: true)
+        UIApplication.topViewController()?.navigationController?.pushViewController(CreatePostRouter.createModule(), animated: true)
     }
     
     // MARK: - Selection Indicator Funcations

@@ -39,6 +39,10 @@
 		E1D678FF29CF69A6006C892A /* PostProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678FE29CF69A6006C892A /* PostProtocol.swift */; };
 		E1D6790129CF69FB006C892A /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790029CF69FB006C892A /* PostInteractor.swift */; };
 		E1D6790329CF6CB7006C892A /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790229CF6CB7006C892A /* CoreDataHelper.swift */; };
+		E1D6790729CF72ED006C892A /* CreatePostProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790629CF72ED006C892A /* CreatePostProtocol.swift */; };
+		E1D6790A29CF742A006C892A /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790929CF742A006C892A /* CreatePostInteractor.swift */; };
+		E1D6790D29CF7762006C892A /* CreatePostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */; };
+		E1D6791029CF78B0006C892A /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		E1D678FE29CF69A6006C892A /* PostProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProtocol.swift; sourceTree = "<group>"; };
 		E1D6790029CF69FB006C892A /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
 		E1D6790229CF6CB7006C892A /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E1D6790629CF72ED006C892A /* CreatePostProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostProtocol.swift; sourceTree = "<group>"; };
+		E1D6790929CF742A006C892A /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
+		E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenter.swift; sourceTree = "<group>"; };
+		E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +308,10 @@
 		E1D678EB29CF39B5006C892A /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				E1D6790E29CF78A5006C892A /* Router */,
+				E1D6790B29CF774C006C892A /* Presenter */,
+				E1D6790829CF741B006C892A /* Interactor */,
+				E1D6790529CF72E0006C892A /* Protocol */,
 				E1D678EC29CF39C8006C892A /* View */,
 			);
 			path = CreatePost;
@@ -330,6 +342,38 @@
 				E1D678EB29CF39B5006C892A /* CreatePost */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		E1D6790529CF72E0006C892A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E1D6790629CF72ED006C892A /* CreatePostProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E1D6790829CF741B006C892A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E1D6790929CF742A006C892A /* CreatePostInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1D6790B29CF774C006C892A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E1D6790C29CF7762006C892A /* CreatePostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1D6790E29CF78A5006C892A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,8 +483,10 @@
 				E1D678C729CEE9D8006C892A /* UIView+Extension.swift in Sources */,
 				E1D678E129CF28B3006C892A /* UserManager.swift in Sources */,
 				E1D678F429CF52E3006C892A /* CoreDataManager.swift in Sources */,
+				E1D6791029CF78B0006C892A /* CreatePostRouter.swift in Sources */,
 				E1D678C929CEEAA3006C892A /* MainTabHeaderView.swift in Sources */,
 				E1D678F229CF3B83006C892A /* UIApplication+Extension.swift in Sources */,
+				E1D6790A29CF742A006C892A /* CreatePostInteractor.swift in Sources */,
 				E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */,
 				E1D678F629CF5B8C006C892A /* CoreDataError.swift in Sources */,
 				E1D678DF29CF2194006C892A /* PostModel.swift in Sources */,
@@ -448,8 +494,10 @@
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,
+				E1D6790D29CF7762006C892A /* CreatePostPresenter.swift in Sources */,
 				E1D678FF29CF69A6006C892A /* PostProtocol.swift in Sources */,
 				E1D6790129CF69FB006C892A /* PostInteractor.swift in Sources */,
+				E1D6790729CF72ED006C892A /* CreatePostProtocol.swift in Sources */,
 				E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */,
 				E1D678C529CEE74E006C892A /* Array+Extension.swift in Sources */,
 				E1D678FC29CF680A006C892A /* PostRouter.swift in Sources */,

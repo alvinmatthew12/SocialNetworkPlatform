@@ -8,13 +8,14 @@
 import UIKit
 
 internal final class CreatePostViewController: UIViewController {
-    
     @IBOutlet private weak var profilePictureImageView: UIImageView!
     @IBOutlet private weak var postAsLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var imageView: UIImageView!
     private let imagePicker = UIImagePickerController()
     private let toolbar = UIToolbar()
+    
+    private lazy var postBarButton = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(postButtonTapped))
     
     private lazy var addImageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -48,8 +49,16 @@ internal final class CreatePostViewController: UIViewController {
         }
     }
     
+    private var text: String = "" {
+        didSet {
+            postBarButton.isEnabled = !text.isEmpty
+        }
+    }
+    
     private var imageViewOriginalFrame: CGRect?
     private let textViewPlaceholder = "Enter your text here..."
+    
+    internal var presenter: CreatePostViewToPresenterProtocol?
     
     override internal func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,6 +67,8 @@ internal final class CreatePostViewController: UIViewController {
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter?.getCurrentUser()
         
         setupNavigationBar()
         setupToolbar()
@@ -70,6 +81,8 @@ internal final class CreatePostViewController: UIViewController {
     }
     
     private func setupView() {
+        postBarButton.isEnabled = false
+        
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         
@@ -94,9 +107,6 @@ internal final class CreatePostViewController: UIViewController {
         navigationController?.navigationBar.backIndicatorImage = UIImage()
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage()
         UIBarButtonItem.appearance().tintColor = .textColor
-        
-        let postBarButton = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(postButtonTapped))
-        postBarButton.imageInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: -8)
         navigationItem.rightBarButtonItem = postBarButton
     }
     
@@ -109,8 +119,13 @@ internal final class CreatePostViewController: UIViewController {
         textView.inputAccessoryView = toolbar
     }
     
+    private func post() {
+        let imageData = imageView.image?.jpegData(compressionQuality: 1.0)
+        presenter?.post(text: text, imageData: imageData)
+    }
+    
     @objc private func postButtonTapped() {
-        navigationController?.popViewController(animated: true)
+        post()
     }
     
     @objc private func imageButtonTapped() {
@@ -151,6 +166,14 @@ extension CreatePostViewController: UITextViewDelegate {
             textView.textColor = .greyColor
         }
     }
+    
+    internal func textViewDidChange(_ textView: UITextView) {
+        if textView.text != textViewPlaceholder {
+            text = textView.text
+        } else {
+            text = ""
+        }
+    }
 }
 
 extension CreatePostViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
@@ -163,5 +186,20 @@ extension CreatePostViewController: UIImagePickerControllerDelegate & UINavigati
 
     internal func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension CreatePostViewController: CreatePostPresenterToViewProtocol {
+    internal func setCurrentUser(user: LocalUser) {
+        profilePictureImageView.image = UIImage(named: user.profilePictureName)
+        postAsLabel.text = "Post as @\(user.username)"
+    }
+    
+    internal func postSuccess() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    internal func postFailed(error: String) {
+        //
     }
 }
