@@ -9,5 +9,4 @@ https://user-images.githubusercontent.com/44364128/227745982-19816492-e37c-4cff-
 ### List
 View all posts, scroll through the page.
 
-![List](https://user-images.githubusercontent.com/44364128/227746115-89d63655-390a-40ae-ac98-f0bbd26b979d.gif)
-<img src="https://user-images.githubusercontent.com/44364128/227746115-89d63655-390a-40ae-ac98-f0bbd26b979d.gif" height="320"/>
+<img src="https://user-images.githubusercontent.com/44364128/227746115-89d63655-390a-40ae-ac98-f0bbd26b979d.gif" height="350" loop=infinite/>
