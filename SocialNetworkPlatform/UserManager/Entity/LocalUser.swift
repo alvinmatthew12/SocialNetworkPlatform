@@ -26,4 +26,8 @@ extension LocalUser {
     internal static var user3: Self {
         .init(id: 3, name: "Olivia", username: "r.olivia11", profilePictureName: "profile-picture-3")
     }
+    
+    internal static var users: [Self] {
+        [.user1, .user2, .user3]
+    }
 }

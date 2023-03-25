@@ -24,6 +24,10 @@
 		E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678D829CF14E0006C892A /* UIColor+Extension.swift */; };
 		E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678DC29CF2127006C892A /* LocalUser.swift */; };
 		E1D678DF29CF2194006C892A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678DE29CF2194006C892A /* Post.swift */; };
+		E1D678E129CF28B3006C892A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E029CF28B3006C892A /* UserManager.swift */; };
+		E1D678E529CF2C67006C892A /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E429CF2C67006C892A /* UserListViewController.swift */; };
+		E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */; };
+		E1D678EA29CF2E1E006C892A /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D678E829CF2E1E006C892A /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		E1D678D829CF14E0006C892A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E1D678DC29CF2127006C892A /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		E1D678DE29CF2194006C892A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E1D678E029CF28B3006C892A /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E1D678E429CF2C67006C892A /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		E1D678E829CF2E1E006C892A /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 				E1D678DA29CF210A006C892A /* UserManager */,
 				E1D678C329CEE73E006C892A /* Extensions */,
 				E1D678C029CEE2E8006C892A /* CoreData */,
+				E1D678E229CF2BF3006C892A /* User */,
 				E1D678CA29CF04CA006C892A /* Post */,
 				E1D678BF29CEE251006C892A /* MainTab */,
 				E1D678BE29CEE204006C892A /* Resources */,
@@ -219,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D678DB29CF2113006C892A /* Entity */,
+				E1D678E029CF28B3006C892A /* UserManager.swift */,
 			);
 			path = UserManager;
 			sourceTree = "<group>";
@@ -229,6 +239,32 @@
 				E1D678DC29CF2127006C892A /* LocalUser.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		E1D678E229CF2BF3006C892A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678E329CF2C0C006C892A /* View */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E1D678E329CF2C0C006C892A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678E629CF2E08006C892A /* UserCell */,
+				E1D678E429CF2C67006C892A /* UserListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1D678E629CF2E08006C892A /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678E729CF2E1E006C892A /* UserTableViewCell.swift */,
+				E1D678E829CF2E1E006C892A /* UserTableViewCell.xib */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D678D729CF1245006C892A /* PostTableViewCell.xib in Resources */,
+				E1D678EA29CF2E1E006C892A /* UserTableViewCell.xib in Resources */,
 				E1D6789B29CEE105006C892A /* LaunchScreen.storyboard in Resources */,
 				E1D6789829CEE105006C892A /* Assets.xcassets in Resources */,
 			);
@@ -334,15 +371,18 @@
 			files = (
 				E1D6789629CEE104006C892A /* SocialNetworkPlatform.xcdatamodeld in Sources */,
 				E1D678C729CEE9D8006C892A /* UIView+Extension.swift in Sources */,
+				E1D678E129CF28B3006C892A /* UserManager.swift in Sources */,
 				E1D678C929CEEAA3006C892A /* MainTabHeaderView.swift in Sources */,
 				E1D678D929CF14E0006C892A /* UIColor+Extension.swift in Sources */,
 				E1D678DF29CF2194006C892A /* Post.swift in Sources */,
 				E1D678DD29CF2127006C892A /* LocalUser.swift in Sources */,
 				E1D6789029CEE104006C892A /* MainTabViewController.swift in Sources */,
 				E1D6788C29CEE104006C892A /* AppDelegate.swift in Sources */,
+				E1D678E929CF2E1E006C892A /* UserTableViewCell.swift in Sources */,
 				E1D678C529CEE74E006C892A /* Array+Extension.swift in Sources */,
 				E1D6788E29CEE104006C892A /* SceneDelegate.swift in Sources */,
 				E1D678D629CF1245006C892A /* PostTableViewCell.swift in Sources */,
+				E1D678E529CF2C67006C892A /* UserListViewController.swift in Sources */,
 				E1D678D229CF055A006C892A /* PostListViewController.swift in Sources */,
 				E1D678C229CEE45D006C892A /* MainTabPageViewController.swift in Sources */,
 			);

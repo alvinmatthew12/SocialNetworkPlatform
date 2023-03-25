@@ -75,7 +75,8 @@
                         </constraints>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" name="baseColor"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="sih-Zp-osc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="6ze-4C-4NY"/>
                     <constraint firstItem="vov-k4-qP1" firstAttribute="leading" secondItem="sih-Zp-osc" secondAttribute="trailing" constant="16" id="AsS-B6-hXy"/>
@@ -86,6 +87,8 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="nameLabel" destination="nL6-xr-EL0" id="tru-Ua-gAm"/>
                 <outlet property="postImageView" destination="W5w-k3-KQ5" id="5za-0V-kNn"/>
@@ -98,9 +101,6 @@
     </objects>
     <resources>
         <image name="profile-picture-1" width="850" height="850"/>
-        <namedColor name="baseColor">
-            <color red="0.019607843137254902" green="0.090196078431372548" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="greyColor">
             <color red="0.69411764705882351" green="0.71372549019607845" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

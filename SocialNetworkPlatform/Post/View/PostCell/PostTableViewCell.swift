@@ -22,7 +22,6 @@ internal final class PostTableViewCell: UITableViewCell {
         
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.width / 2
         postImageView.isHidden = true
-        postImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     internal func setupPost(_ post: Post) {

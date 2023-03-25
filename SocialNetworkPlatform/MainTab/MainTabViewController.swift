@@ -16,10 +16,8 @@ class MainTabViewController: UIViewController {
         view.backgroundColor = .baseColor
         setupView()
         
-        headerView.items = ["All Posts", "Profile"]
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .red
-        pageViewController._viewControllers = [PostListViewController(), vc2]
+        headerView.items = ["All Posts", "Users"]
+        pageViewController._viewControllers = [PostListViewController(), UserListViewController()]
     }
     
     override internal func viewWillAppear(_ animated: Bool) {
