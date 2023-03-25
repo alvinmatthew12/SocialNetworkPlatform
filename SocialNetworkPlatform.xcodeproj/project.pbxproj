@@ -128,12 +128,10 @@
 		E1D6788A29CEE104006C892A /* SocialNetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				E1D678EB29CF39B5006C892A /* CreatePost */,
+				E1D6790429CF72B4006C892A /* Scene */,
 				E1D678DA29CF210A006C892A /* UserManager */,
 				E1D678C329CEE73E006C892A /* Extensions */,
 				E1D678C029CEE2E8006C892A /* CoreData */,
-				E1D678E229CF2BF3006C892A /* User */,
-				E1D678CA29CF04CA006C892A /* Post */,
 				E1D678BF29CEE251006C892A /* MainTab */,
 				E1D678BE29CEE204006C892A /* Resources */,
 				E1D6788B29CEE104006C892A /* AppDelegate.swift */,
@@ -322,6 +320,16 @@
 				E1D678FE29CF69A6006C892A /* PostProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E1D6790429CF72B4006C892A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E1D678E229CF2BF3006C892A /* User */,
+				E1D678CA29CF04CA006C892A /* Post */,
+				E1D678EB29CF39B5006C892A /* CreatePost */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
