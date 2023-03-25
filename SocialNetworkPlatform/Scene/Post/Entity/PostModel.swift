@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal struct PostModel: Codable {
+internal struct PostModel: Codable, Equatable {
     internal var id: String
     internal var post: String
     internal var postImageName: String?

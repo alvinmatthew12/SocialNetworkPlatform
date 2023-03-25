@@ -7,7 +7,7 @@
 
 import UIKit
 
-internal struct LocalUser {
+internal struct LocalUser: Equatable {
     internal let id: Int
     internal let name: String
     internal let username: String

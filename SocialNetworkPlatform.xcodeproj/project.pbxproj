@@ -13,7 +13,6 @@
 		E1D6789629CEE104006C892A /* SocialNetworkPlatform.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1D6789429CEE104006C892A /* SocialNetworkPlatform.xcdatamodeld */; };
 		E1D6789829CEE105006C892A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D6789729CEE105006C892A /* Assets.xcassets */; };
 		E1D6789B29CEE105006C892A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D6789929CEE105006C892A /* LaunchScreen.storyboard */; };
-		E1D678A629CEE106006C892A /* SocialNetworkPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678A529CEE106006C892A /* SocialNetworkPlatformTests.swift */; };
 		E1D678C229CEE45D006C892A /* MainTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678C129CEE45D006C892A /* MainTabPageViewController.swift */; };
 		E1D678C529CEE74E006C892A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678C429CEE74E006C892A /* Array+Extension.swift */; };
 		E1D678C729CEE9D8006C892A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D678C629CEE9D8006C892A /* UIView+Extension.swift */; };
@@ -45,6 +44,7 @@
 		E1D6791029CF78B0006C892A /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */; };
 		E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */; };
 		E1D6791A29CF9D41006C892A /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791929CF9D41006C892A /* ImageFileManager.swift */; };
+		E1D6791C29CFA114006C892A /* PostPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791B29CFA114006C892A /* PostPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		E1D6789A29CEE105006C892A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1D6789C29CEE105006C892A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D678A129CEE106006C892A /* SocialNetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1D678A529CEE106006C892A /* SocialNetworkPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkPlatformTests.swift; sourceTree = "<group>"; };
 		E1D678C129CEE45D006C892A /* MainTabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPageViewController.swift; sourceTree = "<group>"; };
 		E1D678C429CEE74E006C892A /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E1D678C629CEE9D8006C892A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		E1D6790F29CF78B0006C892A /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
 		E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostNotificationHelper.swift; sourceTree = "<group>"; };
 		E1D6791929CF9D41006C892A /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
+		E1D6791B29CFA114006C892A /* PostPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,7 @@
 		E1D678A429CEE106006C892A /* SocialNetworkPlatformTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1D678A529CEE106006C892A /* SocialNetworkPlatformTests.swift */,
+				E1D6791B29CFA114006C892A /* PostPresenterTest.swift */,
 			);
 			path = SocialNetworkPlatformTests;
 			sourceTree = "<group>";
@@ -532,7 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D678A629CEE106006C892A /* SocialNetworkPlatformTests.swift in Sources */,
+				E1D6791C29CFA114006C892A /* PostPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
