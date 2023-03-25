@@ -50,7 +50,7 @@ extension CreatePostPresenter: CreatePostInteractorToPresenterProtocol {
     
     func saveImageFailed(error: String) {
         currentProcessPost = nil
-        view?.postFailed(error: "Sorry, something went wrong")
+        view?.postFailed(error: error)
     }
     
     func postSuccess() {
@@ -60,6 +60,6 @@ extension CreatePostPresenter: CreatePostInteractorToPresenterProtocol {
     
     func postFailed(error: String) {
         currentProcessPost = nil
-        view?.postFailed(error: "Sorry, something went wrong")
+        view?.postFailed(error: error)
     }
 }

@@ -45,6 +45,7 @@
 		E1D6791329CF82B0006C892A /* NewPostNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */; };
 		E1D6791A29CF9D41006C892A /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791929CF9D41006C892A /* ImageFileManager.swift */; };
 		E1D6791C29CFA114006C892A /* PostPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791B29CFA114006C892A /* PostPresenterTest.swift */; };
+		E1D6791E29CFA854006C892A /* CreatePostPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6791D29CFA854006C892A /* CreatePostPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		E1D6791229CF82B0006C892A /* NewPostNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostNotificationHelper.swift; sourceTree = "<group>"; };
 		E1D6791929CF9D41006C892A /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
 		E1D6791B29CFA114006C892A /* PostPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenterTest.swift; sourceTree = "<group>"; };
+		E1D6791D29CFA854006C892A /* CreatePostPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D6791B29CFA114006C892A /* PostPresenterTest.swift */,
+				E1D6791D29CFA854006C892A /* CreatePostPresenterTest.swift */,
 			);
 			path = SocialNetworkPlatformTests;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D6791E29CFA854006C892A /* CreatePostPresenterTest.swift in Sources */,
 				E1D6791C29CFA114006C892A /* PostPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
