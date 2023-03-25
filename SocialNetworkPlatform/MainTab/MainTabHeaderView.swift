@@ -24,7 +24,7 @@ internal final class MainTabHeaderView: UIView {
     
     private let selectionIndicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .textColor
         return view
     }()
     
@@ -33,7 +33,6 @@ internal final class MainTabHeaderView: UIView {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-//        layout.estimatedItemSize = CGSize(width: 100, height: MainTabHeaderView.height)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
@@ -44,7 +43,7 @@ internal final class MainTabHeaderView: UIView {
     
     private let addButton: UIButton = {
         let button = UIButton(type: .system)
-        let image = UIImage(systemName: "plus.circle")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "plus.circle")?.withTintColor(.textColor ?? .white, renderingMode: .alwaysOriginal)
         button.setImage(image, for: .normal)
         return button
     }()
@@ -173,7 +172,7 @@ extension MainTabHeaderView: UICollectionViewDelegate, UICollectionViewDataSourc
         }
         let titleLabel = UILabel()
         titleLabel.text = title
-        titleLabel.textColor = .white
+        titleLabel.textColor = .textColor
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: defaultCellIdentifier, for: indexPath)

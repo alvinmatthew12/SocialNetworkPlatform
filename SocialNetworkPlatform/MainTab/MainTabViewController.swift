@@ -13,14 +13,13 @@ class MainTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .baseColor
         setupView()
         
         headerView.items = ["All Posts", "Profile"]
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .blue
         let vc2 = UIViewController()
         vc2.view.backgroundColor = .red
-        pageViewController._viewControllers = [vc1, vc2]
+        pageViewController._viewControllers = [PostListViewController(), vc2]
     }
     
     override internal func viewWillAppear(_ animated: Bool) {
